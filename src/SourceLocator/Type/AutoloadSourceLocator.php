@@ -162,7 +162,7 @@ class AutoloadSourceLocator extends AbstractSourceLocator
 
         self::$autoloadLocatedFile = null;
         self::$currentAstLocator   = $this->astLocator; // passing the locator on to the implicitly instantiated `self`
-        $previousErrorHandler      = set_error_handler(static function () : void {
+        $previousErrorHandler      = set_error_handler(static function (int $errno, string $errstr, string $errfile = "", int $errline = 0, array $errcontext = []) : bool {
         });
         stream_wrapper_unregister('file');
         stream_wrapper_register('file', self::class);
