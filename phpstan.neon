@@ -10,7 +10,6 @@ parameters:
             message: '#does not call parent constructor#'
             paths:
                 - %currentWorkingDirectory%/src/Reflection/Adapter/*
-                - %currentWorkingDirectory%/src/Reflection/ReflectionObject.php
         -
             message: '#Access to an undefined property PhpParser\\Node\\Param::\$isOptional#'
             paths:
